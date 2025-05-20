@@ -12,7 +12,9 @@ API_KEY = "0b78d84a9fa142e886663442252005"
 
 def get_actual_weather_ui(city, api_key):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=50)
+        # browser = p.chromium.launch(headless=False, slow_mo=50)
+        HEADLESS = os.getenv("HEADLESS", "false").lower() == "true"
+        browser = p.chromium.launch(headless=HEADLESS, slow_mo=50 if not HEADLESS else 0)
         page = browser.new_page()
         page.goto("https://www.weatherapi.com/api-explorer.aspx#current")
 
