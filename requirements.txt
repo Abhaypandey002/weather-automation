@@ -1,0 +1,6 @@
+playwright
+python-dotenv
+tabulate
+pandas
+matplotlib
+python-dotenv
