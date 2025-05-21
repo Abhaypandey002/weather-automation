@@ -4,7 +4,7 @@ from  scripts.actual import get_actual_weather_today
 from  scripts.comparison import compare_forecast_and_actual
 
 def main():
-    cities = ["surat", "mumbai", "delhi"]
+    cities = ["surat", "mumbai", "delhi", "london", "paris", "tokyo", "new york", "sydney", "dubai", "singapore"]
 
     # Fetch monthly forecast for these cities
     get_forecast_with_ui(cities)
